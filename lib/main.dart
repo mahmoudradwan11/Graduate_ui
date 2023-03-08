@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
           listener: (context, state) {},
           builder: (context, state) {
             return MaterialApp(
+               title:'Graduate',
                debugShowCheckedModeBanner: false,
                home: const Home(),
               theme: lightTheme,

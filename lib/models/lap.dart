@@ -12,8 +12,6 @@ class LapTop {
 Widget buildLaptopItem(LapTop lapTop) => Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20), color: Colors.white),
           width: 180,
           height: 250,
           //color: Colors.green,
@@ -81,7 +79,7 @@ Widget buildLaptopItem(LapTop lapTop) => Padding(
               ),
               Expanded(
                 child: Container(
-                  color: Colors.grey[300],
+                    color: Colors.grey[300],
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

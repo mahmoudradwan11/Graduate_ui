@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:graduate_ui/modules/drawerPage.dart';
 import 'package:graduate_ui/shared/bloc_observer.dart';
 import 'package:graduate_ui/shared/cubit.dart';
 import 'package:graduate_ui/shared/states.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
             return MaterialApp(
                title:'Graduate',
                debugShowCheckedModeBanner: false,
-               home: const Home(),
+               home: const DrawerPage(),
               theme: lightTheme,
             );
           }

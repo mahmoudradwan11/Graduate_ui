@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:graduate_ui/models/cate.dart';
 import 'package:graduate_ui/models/lap.dart';
 import 'package:graduate_ui/models/smart.dart';
@@ -19,9 +20,11 @@ class Product extends StatelessWidget {
           return Scaffold(
               appBar: AppBar(
                 centerTitle: true,
-                leading:const Padding(
-                  padding: EdgeInsets.only(left: 25),
-                  child: CircleAvatar(radius: 2,backgroundColor: Colors.black,),
+                leading:IconButton(
+                  onPressed: (){
+                    ZoomDrawer.of(context)!.toggle();
+                  },
+                  icon:const Icon(Icons.menu),
                 ),
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

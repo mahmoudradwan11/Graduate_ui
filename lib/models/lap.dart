@@ -83,70 +83,74 @@ Widget buildLaptopItem(LapTop lapTop) => Padding(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10.0, top: 10),
+                      Expanded(
+                        flex:2,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.0, top: 10),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                  child: Text(
+                                lapTop.productName,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              )),
+                              Expanded(
+                                child: Container(
+                                    height: 30,
+                                    decoration: const BoxDecoration(
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.horizontal(
+                                            left: Radius.circular(20))),
+                                    child: const Center(
+                                        child: Text(
+                                      '10% Off',
+                                      style: TextStyle(color: Colors.white),
+                                    ))),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
+                          child: Text(
+                            lapTop.model,
+                            style:
+                                const TextStyle(color: Colors.grey, fontSize: 15),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 2,
                         child: Row(
                           children: [
-                            Expanded(
-                                child: Text(
-                              lapTop.productName,
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            )),
-                            Expanded(
-                              child: Container(
-                                  height: 30,
-                                  decoration: const BoxDecoration(
-                                      color: Colors.red,
-                                      borderRadius: BorderRadius.horizontal(
-                                          left: Radius.circular(20))),
-                                  child: const Center(
-                                      child: Text(
-                                    '10% Off',
-                                    style: TextStyle(color: Colors.white),
-                                  ))),
-                            )
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10.0),
+                              child: Text(
+                                lapTop.price,
+                                style: const TextStyle(
+                                    color: Colors.black, fontSize: 15),
+                              ),
+                            ),
+                            const Spacer(),
+                            Container(
+                                height: 40,
+                                decoration: const BoxDecoration(
+                                    color: Colors.indigo,
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(20),
+                                        bottomRight: Radius.circular(20))),
+                                child: MaterialButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Buy'.toUpperCase(),
+                                    style: const TextStyle(color: Colors.white),
+                                  ),
+                                ))
                           ],
                         ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10.0),
-                        child: Text(
-                          lapTop.model,
-                          style:
-                              const TextStyle(color: Colors.grey, fontSize: 15),
-                        ),
-                      ),
-                      const Spacer(),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10.0),
-                            child: Text(
-                              lapTop.price,
-                              style: const TextStyle(
-                                  color: Colors.black, fontSize: 15),
-                            ),
-                          ),
-                          const Spacer(),
-                          Container(
-                              height: 40,
-                              decoration: const BoxDecoration(
-                                  color: Colors.indigo,
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(20),
-                                      bottomRight: Radius.circular(20))),
-                              child: MaterialButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'Buy'.toUpperCase(),
-                                  style: const TextStyle(color: Colors.white),
-                                ),
-                              ))
-                        ],
                       )
                     ],
                   ),

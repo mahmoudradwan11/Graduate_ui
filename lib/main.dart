@@ -6,7 +6,6 @@ import 'package:graduate_ui/shared/bloc_observer.dart';
 import 'package:graduate_ui/shared/cubit.dart';
 import 'package:graduate_ui/shared/states.dart';
 import 'package:graduate_ui/shared/theme/theme.dart';
-import 'layout/home.dart';
 void main(){
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
